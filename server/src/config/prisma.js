@@ -1,19 +1,11 @@
 import "dotenv/config";
+import prismaClient from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-import { PrismaClient } from "@prisma/client";
-import { PrismaMssql } from "@prisma/adapter-mssql";
+const { PrismaClient } = prismaClient;
 
-const adapter = new PrismaMssql({
-  server: process.env.DB_SERVER,
-  port: Number(process.env.DB_PORT),
-  database: process.env.DB_NAME,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-
-  options: {
-    encrypt: true,
-    trustServerCertificate: true,
-  },
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
 });
 
 const prisma = new PrismaClient({

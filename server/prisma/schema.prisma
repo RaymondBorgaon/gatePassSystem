@@ -3,13 +3,13 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlserver"
+  provider = "postgresql"
 }
 
 model GatePass {
   id String @id @default(uuid())
 
-  passNumber String @unique()
+  passNumber String @unique
 
   visitorName String
   visitorPhone String
