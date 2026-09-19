@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+}
+
+model GatePass {
+  id String @id @default(uuid())
+
+  passNumber String @unique()
+
+  visitorName String
+  visitorPhone String
+  visitorCompany String?
+
+  purpose String
+  personToMeet String?
+  department String?
+
+  validFrom DateTime
+  validUntil DateTime?
+
+  status String @default("ACTIVE")
+
+  remarks String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([visitorName])
+  @@index([visitorPhone])
+  @@index([status])
+  @@index([validFrom])
+  @@index([createdAt])
+  @@index([status, createdAt])
+}

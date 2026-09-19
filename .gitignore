@@ -1,0 +1,145 @@
+# ==========================================
+# DEPENDENCIES
+# ==========================================
+
+node_modules/
+client/node_modules/
+server/node_modules/
+
+
+# ==========================================
+# ENVIRONMENT VARIABLES
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+
+
+# ==========================================
+# BUILD FILES
+# ==========================================
+
+dist/
+build/
+client/dist/
+client/build/
+server/dist/
+server/build/
+
+
+# ==========================================
+# LOG FILES
+# ==========================================
+
+logs/
+*.log
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+pnpm-debug.log*
+
+
+# ==========================================
+# OPERATING SYSTEM FILES
+# ==========================================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+
+# ==========================================
+# IDE / EDITOR FILES
+# ==========================================
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+
+*.sublime-workspace
+*.sublime-project
+
+
+# ==========================================
+# PRISMA
+# ==========================================
+
+# Prisma generated local files
+prisma/dev.db
+prisma/dev.db-journal
+
+# Prisma local database backups
+*.db
+*.sqlite
+
+
+# ==========================================
+# DATABASE BACKUPS
+# ==========================================
+
+*.bak
+*.backup
+*.sql.bak
+
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+
+tmp/
+temp/
+.cache/
+
+*.tmp
+*.temp
+
+
+# ==========================================
+# TEST / COVERAGE
+# ==========================================
+
+coverage/
+
+.nyc_output/
+
+
+# ==========================================
+# VERCEL / NETLIFY / DEPLOYMENT
+# ==========================================
+
+.vercel/
+.netlify/
+
+
+# ==========================================
+# UPLOADS (IF ADDED IN FUTURE)
+# ==========================================
+
+uploads/
+public/uploads/
+
+
+# ==========================================
+# EXCEL / CSV GENERATED EXPORT FILES
+# ==========================================
+
+exports/
+downloads/
+
+
+# ==========================================
+# OPTIONAL LOCAL CONFIGURATION
+# ==========================================
+
+config.local.js
+config.local.json
