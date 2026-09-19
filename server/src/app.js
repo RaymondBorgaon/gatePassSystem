@@ -36,7 +36,17 @@ const apiLimiter = rateLimit({
    GLOBAL MIDDLEWARE
 ========================================= */
 
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://gate-pass-system-eight.vercel.app/",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
