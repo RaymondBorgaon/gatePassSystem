@@ -38,7 +38,7 @@ const apiLimiter = rateLimit({
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://gate-pass-system-eight.vercel.app/",
+  "https://gate-pass-system-eight.vercel.app",
 ];
 
 app.use(
